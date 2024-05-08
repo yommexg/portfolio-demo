@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boluwatife Portfolio</title>
+    <link rel="icon" href="images/icon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/6eb6bedf76.js"
@@ -74,7 +75,7 @@
             </div>
 
             <div class="tab-contents active-tab" id="skills">
-              <ul style="display: flex; gap: 20px; flex-wrap: wrap">
+              <ul style="display: flex; gap: 30px; flex-wrap: wrap">
                 <li>
                   Front End Development
                   <span>
@@ -102,10 +103,23 @@
                     <p>Express JS</p>
                     <p>Mongo DB</p>
                     <p>AWS services</p>
+                    <p>RESTful API Development</p>
+                    <p>Authentication</p>
+                    <p>Authorization</p>
+                    <p>JWT(JSON Web Token)</p>
+                    <p>Version Control System(GIT)</p>
                   </span>
                 </li>
 
-                <li>Mobile App Development</li>
+                <li>
+                  Mobile App Development
+                  <span>
+                    <p>React Native</p>
+                    <p>Google Play Integeration</p>
+                    <p>Apple Store Integration</p>
+                    <p>Caching and suncing</p>
+                  </span>
+                </li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
@@ -146,10 +160,10 @@
             <i class="fa-solid fa-code"></i>
             <h2>Front End Development</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores,
-              eum quae dignissimos enim tempora expedita natus, fuga similique
-              optio inventore ullam voluptatum, ipsam ut facilis culpa voluptate
-              cupiditate nihil reprehenderit?
+              I specialize in crafting visually stunning and user-friendly web
+              interfaces using HTML, CSS, and JavaScript. Prioritizing seamless
+              responsiveness and optimal performance, I deliver exceptional
+              solutions that captivate and engage audiences.
             </p>
             <!-- <a href="#">Learn more</a> -->
           </div>
@@ -157,10 +171,10 @@
             <i class="fa-solid fa-crop"></i>
             <h2>Back End Development</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores,
-              eum quae dignissimos enim tempora expedita natus, fuga similique
-              optio inventore ullam voluptatum, ipsam ut facilis culpa voluptate
-              cupiditate nihil reprehenderit?
+              As a backend developer, I excel in building robust and scalable
+              server-side solutions using languages like Python, Java, or
+              Node.js, ensuring seamless data management and API integration for
+              dynamic web applications.
             </p>
             <!-- <a href="#">Learn more</a> -->
           </div>
@@ -168,10 +182,10 @@
             <i class="fa-brands fa-app-store"></i>
             <h2>Mobile App Development</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores,
-              eum quae dignissimos enim tempora expedita natus, fuga similique
-              optio inventore ullam voluptatum, ipsam ut facilis culpa voluptate
-              cupiditate nihil reprehenderit?
+              As a mobile app developer, I create dynamic and user-centric
+              applications for Android and iOS platforms, leveraging languages
+              like Java, Kotlin, Swift, or Flutter, ensuring seamless
+              performance and engaging user experiences.
             </p>
             <!-- <a href="#">Learn more</a> -->
           </div>
@@ -183,7 +197,8 @@
     <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Works</h1>
-        <div class="work-list">
+        <!-- <div class="work-list">
+          
           <div class="work">
             <img src="images/work-1.png" alt="work1" />
             <div class="layer">
@@ -226,8 +241,8 @@
               ></a>
             </div>
           </div>
-        </div>
-
+        </div> -->
+        <div id="portfolioItemsContainer" class="work-list"></div>
         <a href="#" class="btn">See more</a>
       </div>
     </div>
@@ -314,6 +329,80 @@
         sidemenu.style.right = "-200px";
       }
     </script>
+
+    <script>
+      const portfolioItems = [
+        {
+          imageSrc: "images/teedeeposh.png",
+          title: "Teedeeposh Online Stores",
+          link: "https://teedeeposh-hz57.vercel.app/",
+          description:
+            "Innovating E-commerce with curated collections and personalized experiences.",
+        },
+        {
+          imageSrc: "images/work-2.png",
+          title: "Music App",
+          link: "google.com",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet velit provident itaque labore rerum ad maiores libero maxime, et dolor ratione",
+        },
+        {
+          imageSrc: "images/work-3.png",
+          title: "Online Shopping App",
+          link: "google.com",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet velit provident itaque labore rerum ad maiores libero maxime, et dolor ratione",
+        },
+      ];
+
+      // Select the container element
+      const portfolioContainer = document.getElementById(
+        "portfolioItemsContainer"
+      );
+
+      // Iterate over the portfolioItems array
+      portfolioItems.forEach((item) => {
+        // Create a new div element for each portfolio item
+        const portfolioItemDiv = document.createElement("div");
+        portfolioItemDiv.classList.add("work");
+
+        // Create an image element and set its source attribute
+        const image = document.createElement("img");
+        image.src = item.imageSrc;
+        image.alt = item.title; // Set alt attribute for accessibility
+        portfolioItemDiv.appendChild(image); // Append the image to the portfolio item div
+
+        // Create a div for the layer
+        const layerDiv = document.createElement("div");
+        layerDiv.classList.add("layer");
+
+        // Create a heading element for the title
+        const title = document.createElement("h3");
+        title.textContent = item.title;
+        layerDiv.appendChild(title); // Append the title to the layer div
+
+        // Create a paragraph element for the description
+        const description = document.createElement("p");
+        description.textContent = item.description;
+        layerDiv.appendChild(description); // Append the description to the layer div
+
+        // Create a link
+        const link = document.createElement("a");
+        link.href = item.link;
+        link.target = "_blank";
+        const icon = document.createElement("i");
+        icon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
+        link.appendChild(icon); // Append the icon to the link
+        layerDiv.appendChild(link); // Append the link to the layer div
+
+        // Append the layer div to the portfolio item div
+        portfolioItemDiv.appendChild(layerDiv);
+
+        // Append the portfolio item div to the container
+        portfolioContainer.appendChild(portfolioItemDiv);
+      });
+    </script>
+
     <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbwapKXsiQ4hjzokrmJL9Rbalu63aoDr7IXnm7JCbGeKnr9AlOqPbcIIhGCdmX_EzZyC/exec";
