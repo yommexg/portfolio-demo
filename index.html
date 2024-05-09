@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boluwatife Portfolio</title>
+    <title>Bolu Yomi-Olugbodi Portfolio</title>
     <link rel="icon" href="images/icon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
     <script
@@ -16,7 +16,20 @@
     <div id="header">
       <div class="container">
         <nav>
-          <p class="logo">AnimeCodeLord</p>
+          <div style="display: flex; align-items: center; gap: 20px">
+            <p class="logo">AnimeCodeLord</p>
+            <a
+              href="https://github.com/yommexg"
+              target="_blank"
+              style="text-decoration: none; color: white"
+              class="navgit"
+              ><i
+                class="fa-brands fa-github"
+                style="font-size: 30px; color: white; margin-bottom: 10px"
+              ></i>
+              <h5>Github</h5></a
+            >
+          </div>
           <!-- <img src="images/logo.png" alt="logo" class="logo" /> -->
           <ul id="sidemenu">
             <li><a href="#header" onclick="closemenu()">Home</a></li>
@@ -83,6 +96,7 @@
                     <p>CSS</p>
                     <p>JavaScript</p>
                     <p>TypeScript</p>
+                    <p>Vite</p>
                     <p>Responsive Designs</p>
                     <p>Tailwind CSS</p>
                     <p>React Frame Work</p>
@@ -102,12 +116,17 @@
                     <p>Node JS</p>
                     <p>Express JS</p>
                     <p>Mongo DB</p>
-                    <p>AWS services</p>
+                    <p>Redix</p>
+                    <p>Planet Scale</p>
+                    <p>Nodemailer</p>
+                    <p>Email JS</p>
+                    <p>AWS Cloud Sorage</p>
                     <p>RESTful API Development</p>
                     <p>Authentication</p>
                     <p>Authorization</p>
                     <p>JWT(JSON Web Token)</p>
                     <p>Version Control System(GIT)</p>
+                    <p>Render</p>
                   </span>
                 </li>
 
@@ -197,53 +216,8 @@
     <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Works</h1>
-        <!-- <div class="work-list">
-          
-          <div class="work">
-            <img src="images/work-1.png" alt="work1" />
-            <div class="layer">
-              <h3>Social Media App</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur amet velit provident itaque labore rerum ad maiores
-                libero maxime, et dolor ratione
-              </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="images/work-2.png" alt="work1" />
-            <div class="layer">
-              <h3>Music App</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur amet velit provident itaque labore rerum ad maiores
-                libero maxime, et dolor ratione
-              </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="images/work-3.png" alt="work1" />
-            <div class="layer">
-              <h3>Online Shopping App</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur amet velit provident itaque labore rerum ad maiores
-                libero maxime, et dolor ratione
-              </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-        </div> -->
         <div id="portfolioItemsContainer" class="work-list"></div>
-        <a href="#" class="btn">See more</a>
+        <!-- <a href="#" class="btn" id="seeMoreBtn"></a> -->
       </div>
     </div>
 
@@ -252,14 +226,30 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fa-solid fa-paper-plane"></i>hydrokidb@gmail.com</p>
-            <p><i class="fa-solid fa-phone"></i>+2348153192058</p>
+            <p>
+              <a
+                href="mailto:hydrokidb@gmail.com"
+                style="text-decoration: none; color: white"
+                ><i class="fa-solid fa-paper-plane"></i>hydrokidb@gmail.com</a
+              >
+              <a
+                href="tel:+2348153192058"
+                style="text-decoration: none; color: white"
+                ><i class="fa-solid fa-phone"></i>+2348153192058</a
+              >
+            </p>
             <div class="social-icons">
               <!-- <a href=""><i class="fa-brands fa-facebook"></i></a> -->
-              <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
-              <a href=""><i class="fa-brands fa-github"></i></a>
+              <!-- <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a> -->
+              <a
+                href="https://www.linkedin.com/in/bolu-yomi-olugbodi-ab62951a0/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/yommexg" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
             </div>
             <a href="images/my-cv.pdf" download="" class="btn btn2"
               >Download CV</a
@@ -329,77 +319,112 @@
         sidemenu.style.right = "-200px";
       }
     </script>
-
     <script>
       const portfolioItems = [
+        {
+          imageSrc: "images/netflix.png",
+          title: "Yomnet",
+          link: "https://yomnet-9d5a3.web.app/",
+          description: "A netflix clone for movies",
+        },
+        {
+          imageSrc: "images/bankapp.png",
+          title: "Hoo Bank",
+          link: "https://yommexbankapp.vercel.app/",
+          description: "A demo of a bank web app.",
+        },
         {
           imageSrc: "images/teedeeposh.png",
           title: "Teedeeposh Online Stores",
           link: "https://teedeeposh-hz57.vercel.app/",
-          description:
-            "Innovating E-commerce with curated collections and personalized experiences.",
+          description: "Fullstack Ecommerce Website.",
         },
         {
-          imageSrc: "images/work-2.png",
-          title: "Music App",
-          link: "google.com",
+          imageSrc: "images/teedeeposhadmin.png",
+          title: "Teedeeposh Admin Page",
+          link: "https://teedeeposh-git-main-yommexg.vercel.app/login",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet velit provident itaque labore rerum ad maiores libero maxime, et dolor ratione",
+            "Full stack Admin Page where products , brand and categories can be uploaded",
         },
         {
-          imageSrc: "images/work-3.png",
-          title: "Online Shopping App",
-          link: "google.com",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur amet velit provident itaque labore rerum ad maiores libero maxime, et dolor ratione",
+          imageSrc: "images/ai.png",
+          title: "GPT-3",
+          link: "https://gpt3-ai-five.vercel.app/",
+          description: "A demo UI of Artificial Intelligence ",
+        },
+        {
+          imageSrc: "images/kitchen.png",
+          title: "Yommex Kitchen",
+          link: "https://yommex-kithcen.vercel.app/",
+          description: "A demo UI of Gericht Kitchen",
         },
       ];
 
-      // Select the container element
       const portfolioContainer = document.getElementById(
         "portfolioItemsContainer"
       );
 
-      // Iterate over the portfolioItems array
-      portfolioItems.forEach((item) => {
-        // Create a new div element for each portfolio item
-        const portfolioItemDiv = document.createElement("div");
-        portfolioItemDiv.classList.add("work");
+      function renderPortfolioItems(numItemsToShow) {
+        // Clear existing items in the container
+        portfolioContainer.innerHTML = "";
 
-        // Create an image element and set its source attribute
-        const image = document.createElement("img");
-        image.src = item.imageSrc;
-        image.alt = item.title; // Set alt attribute for accessibility
-        portfolioItemDiv.appendChild(image); // Append the image to the portfolio item div
+        // Iterate over the specified number of portfolio items
+        for (let i = 0; i < numItemsToShow && i < portfolioItems.length; i++) {
+          const item = portfolioItems[i];
+          const portfolioItemDiv = document.createElement("div");
+          portfolioItemDiv.classList.add("work");
 
-        // Create a div for the layer
-        const layerDiv = document.createElement("div");
-        layerDiv.classList.add("layer");
+          const image = document.createElement("img");
+          image.src = item.imageSrc;
+          image.alt = item.title;
+          portfolioItemDiv.appendChild(image);
 
-        // Create a heading element for the title
-        const title = document.createElement("h3");
-        title.textContent = item.title;
-        layerDiv.appendChild(title); // Append the title to the layer div
+          const layerDiv = document.createElement("div");
+          layerDiv.classList.add("layer");
 
-        // Create a paragraph element for the description
-        const description = document.createElement("p");
-        description.textContent = item.description;
-        layerDiv.appendChild(description); // Append the description to the layer div
+          const title = document.createElement("h3");
+          title.textContent = item.title;
+          layerDiv.appendChild(title);
 
-        // Create a link
-        const link = document.createElement("a");
-        link.href = item.link;
-        link.target = "_blank";
-        const icon = document.createElement("i");
-        icon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
-        link.appendChild(icon); // Append the icon to the link
-        layerDiv.appendChild(link); // Append the link to the layer div
+          const description = document.createElement("p");
+          description.textContent = item.description;
+          layerDiv.appendChild(description);
 
-        // Append the layer div to the portfolio item div
-        portfolioItemDiv.appendChild(layerDiv);
+          const link = document.createElement("a");
+          link.href = item.link;
+          link.target = "_blank";
+          const icon = document.createElement("i");
+          icon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
+          link.appendChild(icon);
+          layerDiv.appendChild(link);
 
-        // Append the portfolio item div to the container
-        portfolioContainer.appendChild(portfolioItemDiv);
+          portfolioItemDiv.appendChild(layerDiv);
+          portfolioContainer.appendChild(portfolioItemDiv);
+        }
+
+        if (numItemsToShow < portfolioItems.length) {
+          const seeMoreBtn = document.createElement("a");
+          seeMoreBtn.href = "#";
+          seeMoreBtn.classList.add("btn");
+          seeMoreBtn.textContent = "See more";
+          seeMoreBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            renderPortfolioItems(numItemsToShow + 3);
+          });
+          // const seeMoreBtnContainer = document.getElementById("seeMoreBtn");
+          // seeMoreBtnContainer.appendChild(seeMoreBtn);
+          portfolioContainer.append(seeMoreBtn);
+        }
+      }
+
+      // Determine the initial number of items to show based on device size
+      const numInitialItemsToShow = window.innerWidth < 768 ? 2 : 3;
+      renderPortfolioItems(numInitialItemsToShow);
+
+      // Update number of items to show on window resize
+      window.addEventListener("resize", function () {
+        const numItemsToShow = window.innerWidth < 768 ? 2 : 3;
+        renderPortfolioItems(numItemsToShow);
       });
     </script>
 
