@@ -60,7 +60,7 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="images/user.png" alt="Bolu" />
+            <img src="images/user.jpg" alt="Bolu" />
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">
@@ -432,7 +432,7 @@
           seeMoreBtn.textContent = "See more";
           seeMoreBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            renderPortfolioItems(numItemsToShow + 3);
+            renderPortfolioItems(numItemsToShow + 4);
           });
           // const seeMoreBtnContainer = document.getElementById("seeMoreBtn");
           // seeMoreBtnContainer.appendChild(seeMoreBtn);
@@ -441,12 +441,14 @@
       }
 
       // Determine the initial number of items to show based on device size
-      const numInitialItemsToShow = window.innerWidth < 768 ? 2 : 3;
+      const numInitialItemsToShow =
+        window.innerWidth < 768 ? portfolioItems.length : 4;
       renderPortfolioItems(numInitialItemsToShow);
 
       // Update number of items to show on window resize
       window.addEventListener("resize", function () {
-        const numItemsToShow = window.innerWidth < 768 ? 2 : 3;
+        const numItemsToShow =
+          window.innerWidth < 768 ? portfolioItems.length : 4;
         renderPortfolioItems(numItemsToShow);
       });
     </script>
