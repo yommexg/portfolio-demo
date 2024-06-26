@@ -480,3 +480,13 @@ nav .fa-solid {
   margin-top: -40px;
   display: block;
 }
+
+.icon-list {
+  background: blue;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10;
+}
+.icon-list i {
+  width: 40;
+}
